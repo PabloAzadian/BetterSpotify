@@ -1,0 +1,19 @@
+.header{
+    display: flex;
+    justify-content: left;
+    background-color: antiquewhite;
+    align-items: center;
+    border-bottom: 5px solid rgb(237, 190, 109);;
+}
+
+.header img {
+    height: 150px;
+    width: 150px;
+    margin: 15px;
+}
+
+.header h1 {
+    align-self: flex-end;
+    margin-bottom: 30px;
+    color: rgb(237, 190, 109);
+}
