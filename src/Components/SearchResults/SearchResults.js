@@ -1,5 +1,6 @@
 import React from 'react'
 import "./SearchResults.css"
+import TrackList from "../TrackList/TrackList";
 
 
 const songResults = [
@@ -22,24 +23,20 @@ const songResults = [
 
 
 
-function SearchResults({searchOption, searchTerm})  {
+
+function SearchResults(props)  {
   return (
     <div className='results'>
         <div className='ref-bar'>
-            <h4 className='title'>Title</h4>
-            <h4 className='album'>Album</h4>
-            <h4 className='duration'>Duration</h4>
+            <h4>Image</h4>
+            <h4>Title</h4>
+            <h4>Album</h4>
+            <h4>Duration</h4>
+            <h4>Action</h4>
         </div>
-        {songResults.map((song, i) => (
-        <div className='songs' key={i}>
-            <img src={song.picSrc} alt={song.name} />
-            <div className='names'>
-                <h2>{song.name}</h2>
-                <h3>{song.artist}</h3>
-            </div>
-            <h3 className='album'>{song.album}</h3>
-            <h3 className='duration'> {song.duration}</h3>
-        </div>),)}
+        <div className="SearchResults">
+            <TrackList tracks={props.searchResults} onAdd={props.onAdd} />
+        </div>
             
     </div>
   );

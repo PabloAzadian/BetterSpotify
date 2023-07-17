@@ -22,11 +22,13 @@
     width: 100%;
     font-size: 100%;
     border: 3px solid rgb(236, 193, 136); 
-};
+}
 
   .search-button {
-    height: 20rem;
-    background-color: antiquewhite;
+    height: 2.5rem;
+    background-color: rgb(236, 193, 136); 
+    border-color: rgb(236, 193, 136);;
+    border: 3px solid rgb(236, 193, 136); 
 }
 
 .options {
@@ -46,8 +48,9 @@
     border: 0.5px solid rgb(236, 193, 136);
 }
 
-.options button.active {
-    
-    background-color: rgb(215, 176, 126);
-    
-}
+.search-bar .options button.active {
+    background-color: rgb(236, 193, 136);;
+    color: #333333;
+   
+  }
+

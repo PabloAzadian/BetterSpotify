@@ -1,0 +1,32 @@
+.results {
+    background-color: antiquewhite;
+    height: 700px;
+    overflow-y: scroll;
+    padding: .88rem;
+    width: 45%;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent
+}
+
+@media only screen and (max-width: 1020px) {
+    .SearchResults {
+      width: 90%;
+      margin-bottom: 2rem;
+    }
+  }
+
+.ref-bar {
+    
+    display: grid;
+    grid-template-columns: 7rem 1.5fr 1fr 1fr 1fr;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 0px;
+    height: 3rem;
+    border-bottom: 2px solid black;
+}
+
+

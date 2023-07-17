@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
 }
 
 .App-logo {
@@ -27,6 +27,13 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.App-playlist {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
 }
 
 @keyframes App-logo-spin {

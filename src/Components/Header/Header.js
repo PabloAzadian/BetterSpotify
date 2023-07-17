@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.css';
-import logo from "../BetterSpotiLogo.png"
+import logo from "../../BetterSpotiLogo.png"
 
 function Header() {
   return (

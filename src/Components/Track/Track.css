@@ -1,0 +1,56 @@
+
+
+.Track-action {
+  cursor: pointer;
+  padding: .5rem;
+  font-size: 1.05rem;
+  transition: color .25s;
+  color: #fff;
+  background-color: antiquewhite;
+  border-radius: 50px;
+  width: 50%;
+  color: rgb(221, 164, 90);
+}
+
+.Track-action:hover {
+  color: aliceblue;
+  background-color: greenyellow;
+
+}
+
+.Track {
+  display: grid;
+  grid-template-columns: 8rem 1.5fr 1fr 1fr 1fr;
+  gap: 1rem;
+  margin: auto;
+  align-items: center;
+  background-color: rgb(221, 164, 90);
+  width: 90%;
+  margin-top: 1rem;
+  color: antiquewhite;
+  height: 8rem;
+  justify-items: center;
+}
+
+
+
+.Track img {
+  padding: 0.5rem;
+  justify-items: flex-start;
+  width: 7rem;
+  height: 7rem;
+}
+
+
+
+/* .album {
+  padding: auto;
+  margin: auto;
+  
+} */
+
+/* .duration {
+  padding: auto;
+  margin: auto;
+  margin-right: 3.5rem;
+} */

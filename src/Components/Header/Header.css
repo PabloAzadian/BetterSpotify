@@ -7,13 +7,13 @@
 }
 
 .header img {
-    height: 150px;
-    width: 150px;
-    margin: 15px;
+    height: 7rem;
+    width: 7rem;
+    margin: 0.7rem;
 }
 
 .header h1 {
     align-self: flex-end;
-    margin-bottom: 30px;
+    margin-bottom: 1.5rem;
     color: rgb(237, 190, 109);
 }
