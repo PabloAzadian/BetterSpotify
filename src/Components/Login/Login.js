@@ -4,7 +4,7 @@ import Header from '../Header/Header';
 import logo from "../../BetterSpotiLogo.png"
 import Spotify from "../../util/Spotify";
 
-function Login({loginStateSetter}) {
+function Login({loginStateSetter, setIsClicked}) {
     
 
     const [registeredLogin, setRegisteredLogin] = useState(false)
@@ -23,8 +23,12 @@ function Login({loginStateSetter}) {
     
     
     const handleSpotifyConnect = () => {
-        Spotify.getProfile().then(setUserInfo);
-        Spotify.getAccessToken();
+        setIsClicked(true);
+        const token = Spotify.getAccessToken();
+        if (token) {
+            loginStateSetter(true);
+            setIsClicked(true);
+        }
         
     };
 
@@ -58,18 +62,28 @@ function Login({loginStateSetter}) {
         }
     }
 
-    const title = (
-        <div className='login-title'>
-            <h1>Login to BetterSpotify</h1>
-            <img src={logo} alt='logo'/>
-        </div>
-    )
+    // const title = (
+    //     <div className='login-title'>
+    //         <h1>Login to BetterSpotify</h1>
+    //         <img src={logo} alt='logo'/>
+    //     </div>
+    // )
 
     
   return (
     <div>
         <Header/>
-        {!registeredLogin ? 
+        <div className='login-options-container'>
+                <div className='login-title'>
+                    <h1>Login to BetterSpotify</h1>
+                    <img src={logo} alt='logo'/>
+                </div>
+                <button onClick={handleSpotifyConnect} className='login-button-spotify'>
+                    Connect with Spotify
+                </button>
+
+        </div>
+        {/* {!registeredLogin ? 
             <div className='login-options-container'>
                 {title}
                 <button onClick={handleSpotifyConnect} className='login-button-spotify'>
@@ -100,7 +114,7 @@ function Login({loginStateSetter}) {
                 </form>
             </div>
             
-        }
+        } */}
     </div>
   )
 }
