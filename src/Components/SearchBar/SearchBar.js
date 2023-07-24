@@ -20,7 +20,7 @@ function SearchBar(props) {
   };
   return (
     <section className='search-bar'>
-      <div className='options'>
+      {/* <div className='options'>
         <button
           onClick={handleClick}
           value='song'
@@ -42,7 +42,7 @@ function SearchBar(props) {
         >
           Playlist
         </button>
-      </div>
+      </div> */}
       <form onSubmit={search} className='input'>
             <input onChange={handleChange} type='text' placeholder='Search your song, artist, playlist, etc' />
             <button type="submit" className='search-button'>Search</button>

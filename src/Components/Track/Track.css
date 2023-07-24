@@ -6,16 +6,23 @@
   font-size: 1.05rem;
   transition: color .25s;
   color: #fff;
+  border: none;
   background-color: antiquewhite;
-  border-radius: 50px;
-  width: 50%;
+  border-radius: 20px;
+  height: 40px;
+  width: 40px;
   color: rgb(221, 164, 90);
 }
 
-.Track-action:hover {
-  color: aliceblue;
-  background-color: greenyellow;
 
+.names h5{
+  max-height: 3rem;
+  overflow: hidden;
+}
+
+.names h6{
+  max-height: 3rem;
+  overflow: hidden;
 }
 
 .Track {
@@ -30,27 +37,74 @@
   color: antiquewhite;
   height: 8rem;
   justify-items: center;
+  border-radius: 20px;
 }
 
 
 
 .Track img {
   padding: 0.5rem;
-  justify-items: flex-start;
   width: 7rem;
   height: 7rem;
+  margin: auto;
+}
+
+.Track-action:hover {
+  background-color:rgb(210, 132, 30);
+  color: aliceblue;
+  border: 1px solid black;
+  font-weight: bolder;
 }
 
 
 
-/* .album {
-  padding: auto;
-  margin: auto;
-  
-} */
 
-/* .duration {
-  padding: auto;
-  margin: auto;
-  margin-right: 3.5rem;
-} */
+@media only screen and (max-width: 1020px) {
+  .Track {
+    display: grid;
+    grid-template-columns: 6rem 1.5fr 1fr 1fr 1fr;
+    gap: 1rem;
+    margin: auto;
+    align-items: center;
+    background-color: rgb(221, 164, 90);
+    width: 100%;
+    margin-top: 1rem;
+    color: antiquewhite;
+    height: 6rem;
+    justify-items: center;
+    font-size: .7rem;
+
+  }
+
+  .Track img {
+    padding: 0rem;
+    justify-items: flex-start;
+    width: 5rem;
+    height: 5rem;
+    padding: 0.5rem;
+  }
+
+  .names h5 {
+    max-width: 3rem;
+    max-height: 3rem;
+    margin: 2px;
+    overflow: hidden;
+  }
+
+  .names h6 {
+    max-width: 3rem;
+    max-height: 3rem;
+    margin: 2px;
+    overflow: hidden;
+  }
+
+  .Track-action {
+    
+    height: 2rem;
+    width: 2rem;
+    padding: 0.3rem;
+    margin: 0.2rem;
+    
+  }
+
+}

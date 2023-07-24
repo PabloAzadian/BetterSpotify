@@ -1,19 +1,132 @@
 .header{
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     background-color: antiquewhite;
     align-items: center;
-    border-bottom: 5px solid rgb(237, 190, 109);;
+    border-bottom: 5px solid rgb(237, 190, 109);
+    width: 100%;
+    opacity:0.95;
+    
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: antiquewhite;
+    align-items: center;
+    width: 10rem;
 }
 
 .header img {
-    height: 7rem;
-    width: 7rem;
+    height: 5rem;
+    width: 5rem;
     margin: 0.7rem;
 }
 
-.header h1 {
+.logo-container h1 {
     align-self: flex-end;
     margin-bottom: 1.5rem;
     color: rgb(237, 190, 109);
 }
+
+.userbox-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    margin-top: 0;
+}
+.userbox:hover {
+    background-color: rgb(237, 190, 109);
+}
+.userbox:hover h2 {
+    color: aliceblue;
+}
+ 
+.userbox {
+    display: flex;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    margin: 0.5rem;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.userbox img {
+    height: 4.2rem;
+    width: 4.2rem;
+    margin: .4rem ;
+    
+    border: 2px solid rgb(237, 190, 109);
+    border-radius: 10rem;
+    
+}
+.userbox h2 {
+    align-self: center;
+    color: rgb(237, 190, 109);
+    padding: 1.5rem 0.5rem 1.5rem;
+    width: fit-content;
+    margin: 0.5rem ;
+}
+
+.user-dropdown {
+    border: 2px solid rgb(237, 190, 109);
+    border-top: none;
+    width: 200px;
+    background-color: antiquewhite;
+    top: 6.1rem;
+    right: 0.5rem;
+    position: absolute;
+    color: rgb(237, 190, 109);
+    padding: 0;
+    border-radius: 10px;
+}
+
+.user-dropdown h4 {
+    text-align: left;
+    margin: 0;
+    padding: 0.8rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* .user-dropdown:hover .user-dropdown h4 {
+    background-color: rgb(237, 190, 109);} /* Move the background color here */
+
+
+.user-dropdown h4:hover {
+    font-size: 20px;
+    font-weight: 900;
+    transform: translateX(20px);
+}
+
+
+.user-dropdown h3{
+  cursor: pointer;
+  border-color: transparent;
+  background-color: rgb(221, 164, 90);
+  text-align: center;
+  color: aliceblue;
+  margin:0;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.user-dropdown h3:hover {
+    background-color:aliceblue; 
+    color: rgb(221, 164, 90)
+
+}
+
+@media only screen and (max-width: 1020px) {
+    .userbox h2 {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 1020px) {
+    .logo-container h1 {
+        font-size: 1.5rem
+    }
+  }

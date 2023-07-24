@@ -13,6 +13,7 @@ const App = () => {
   const [playlistTracks, setPlaylistTracks] = useState([]);
   const [newPlaylist, setNewPlaylist] = useState(false)
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isClicked, setIsClicked] = useState(false)
   
   
 
@@ -23,6 +24,7 @@ const App = () => {
     window.location = 'http://localhost:3000';
   };
 
+  
   
 
   const search = (term, option) => {
@@ -53,14 +55,17 @@ const App = () => {
     });   
   }
 
+
+
+  
+
   return (
     <div>
       
       
         {isLoggedIn ?
         <div className="App">
-          <Header/>
-          <button onClick={handleLogout}>Log out</button>
+          <Header handleLogout={handleLogout} isLoggedIn={isLoggedIn}/>
           <SearchBar onSearch={search} />
           <div className="App-playlist">
               <SearchResults searchResults={searchResults} onAdd={addTrack} />
@@ -72,12 +77,12 @@ const App = () => {
               onRemove={removeTrack}
               onSave={savePlaylist}/>)
               :
-              <button onClick={() => setNewPlaylist(true)}>Add new Playlist +</button>}
+              <button className="toggle-new-playlist-button"onClick={() => setNewPlaylist(true)}>Create new Playlist +</button>}
           </div>
           
         </div>
         :
-        <Login  loginStateSetter={setIsLoggedIn}/>
+        <Login setIsClicked={setIsClicked} loginStateSetter={setIsLoggedIn}/>
       }
     </div>
   );

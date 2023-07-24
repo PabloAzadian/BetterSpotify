@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  /* background-color: antiquewhite; */
+  opacity: 0.9;
 }
 
 .App-logo {
@@ -36,11 +36,42 @@
   margin: auto;
 }
 
-@keyframes App-logo-spin {
+.toggle-new-playlist-button{
+  cursor: pointer;
+  width: 20rem;
+  height: 3rem;
+  border-radius: 54px;
+  border-color: transparent;
+  margin-top: 1.27rem;
+  background-color: rgb(221, 164, 90);
+  text-align: center;
+  font-size: .83rem;
+  transition: background-color .25s;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+
+
+.toggle-new-playlist-button:hover {
+  background-color:aliceblue; 
+  color: rgb(221, 164, 90)
+}
+
+  @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+
+@media only screen and (max-width: 1020px) {
+  .App-playlist {
+    align-items: center;
+    flex-direction: column;
+    width:95%;
   }
 }

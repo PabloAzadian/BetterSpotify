@@ -4,6 +4,9 @@
   overflow-y: scroll;
   padding: .88rem;
   width: 45%;
+  border: 3px solid rgb(221, 164, 90);
+  border-radius: 20px;
+
 }
 
 .Playlist input {
@@ -11,12 +14,14 @@
   border: 0;
   outline: 0;
   background: transparent;
-  border-bottom: 1px solid #6f6f6f;
+  border-bottom: 1px solid rgb(221, 164, 90);
   font-family: 'Poppins', sans-serif;
   font-size: 1.55rem;
-  color: #fff;
+  color:rgb(221, 164, 90)
 }
-
+.playlist-header input::placeholder {
+  color:rgb(221, 164, 90)
+}
 .Playlist-save {
   cursor: pointer;
   width: 10rem;
@@ -51,6 +56,11 @@
   width: 2rem;
   align-items: center;
   justify-content: center;
+}
+
+.error {
+  margin: 5px;
+  color: red
 }
 
 ::-webkit-scrollbar {

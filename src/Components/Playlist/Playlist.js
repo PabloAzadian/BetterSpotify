@@ -40,10 +40,10 @@ const Playlist = (props) => {
   return (
     <div className="Playlist">
       <div className="playlist-header">
-        <input onChange={handleNameChange} value={playlistName} placeholder="New Playlist" />
+        <input onChange={handleNameChange} value={playlistName} className="playlist-name-changer" placeholder="New Playlist" />
         <button className="button-togle-off" onClick={toggleOff}>X</button>
       </div>
-      {error&& <div>{error}</div> }
+      {error&& <div className="error" >{error}</div> }
       <TrackList
         tracks={props.playlistTracks}
         isRemoval={true}
